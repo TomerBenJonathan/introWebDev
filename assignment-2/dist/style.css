@@ -1,0 +1,450 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+  display: grid;
+  grid-template-rows: 55px calc(100vh - 55px);
+  grid-template-columns: auto;
+  grid-template-areas: "header header" "nav content" "footer footer";
+}
+.page .nav {
+  grid-area: nav;
+  background-color: lightblue;
+  padding: 24px 12px;
+  justify-content: center;
+}
+.page .icon {
+  width: 16px;
+  height: 16px;
+  margin: 8px;
+}
+.page .icon__large {
+  width: 32px;
+  height: 32px;
+}
+.page .header {
+  grid-area: header;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  padding-right: 0;
+}
+.page .gallery {
+  max-height: 550px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  align-items: flex-end;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid lightblue;
+}
+.page .link {
+  text-decoration: none;
+  list-style: none;
+}
+.page .link:hover {
+  color: green;
+}
+.page .link__light-bg {
+  text-decoration: none;
+  list-style: none;
+  color: darkblue;
+  font-weight: 500;
+  padding: 8px;
+  background-color: #d7eaf0;
+  margin: 0;
+}
+.page .link__darker-bg {
+  text-decoration: none;
+  list-style: none;
+  color: darkblue;
+  font-weight: 500;
+  padding: 8px;
+  background-color: #86cbe2;
+  margin: 0;
+}
+.page p {
+  margin: 0;
+}
+.page ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+}
+.page .content {
+  grid-area: content;
+  background-color: #f1f1f1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 24px;
+}
+.page article {
+  height: 1000px;
+}
+.page form {
+  display: flex;
+  flex-direction: column;
+}
+.page .input {
+  width: 330px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page label {
+  font-weight: bold;
+}
+.page input[type=text],
+.page input[type=date],
+.page input[type=email],
+.page input[type=number],
+.page input[type=tel],
+.page select,
+.page textarea {
+  cursor: default;
+  width: 200px;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 2px solid lightblue;
+}
+.page .form-section {
+  border: 6px solid lightblue;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px 0;
+}
+.page .logo {
+  color: white;
+}
+.page .card {
+  padding: 24px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 32px;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+}
+.page .img {
+  width: 500px;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.page .img__small {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.page .img__small:hover {
+  width: 72%;
+  height: 82%;
+  object-fit: cover;
+  border-radius: 8px;
+  position: absolute;
+  right: 350px;
+  top: 28px;
+  transition: opacity 0.5s, top 0.5s;
+}
+.page .text-and-icons {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.page .wrapper__column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.page .wrapper__column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.page .wrapper__inline {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+.page .wrapper__inline-start {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: flex-start;
+}
+.page .footer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  background-color: #282829;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}
+.page button {
+  padding: 12px 16px;
+  background-color: darkblue;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+}
+.page table,
+.page td {
+  border: 1.4px solid #333;
+  padding: 4px 8px;
+  margin: 1px;
+}
+.page thead,
+.page tfoot {
+  background-color: #03153b;
+  color: #fff;
+}
+.page th {
+  border-left: 1px solid white;
+  padding: 4px 8px;
+}
+.page .star-icon {
+  fill: orange;
+}
+.page .eng-text {
+  text-align: left;
+}
+.page .rtl {
+  text-align: right;
+}
+.page .td-school-first {
+  background-color: #cceecc;
+}
+.page .td-school-second {
+  background-color: #cee2e9;
+}
+.page .tr-total-rating {
+  background-color: white;
+  font-weight: bold;
+}
+.page .absu {
+  position: absolute;
+}
+
+.page-dark {
+  display: grid;
+  grid-template-rows: 55px calc(100vh - 55px);
+  grid-template-columns: auto;
+  grid-template-areas: "header header" "nav content" "footer footer";
+}
+.page-dark .nav {
+  grid-area: nav;
+  background-color: #282829;
+  padding: 24px 12px;
+  justify-content: center;
+  color: white;
+}
+.page-dark .icon {
+  width: 16px;
+  height: 16px;
+  margin: 8px;
+}
+.page-dark .icon__large {
+  width: 32px;
+  height: 32px;
+}
+.page-dark .header {
+  grid-area: header;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  padding-right: 0;
+}
+.page-dark .gallery {
+  max-height: 550px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  align-items: flex-end;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid lightblue;
+}
+.page-dark .link {
+  text-decoration: none;
+  list-style: none;
+}
+.page-dark .link:hover {
+  color: green;
+}
+.page-dark .link__light-bg {
+  text-decoration: none;
+  list-style: none;
+  color: lightblue;
+  font-weight: 500;
+  padding: 8px;
+  background-color: #444446;
+  margin: 0;
+}
+.page-dark .link__darker-bg {
+  text-decoration: none;
+  list-style: none;
+  color: lightblue;
+  font-weight: 500;
+  padding: 8px;
+  background-color: #6b6b70;
+  margin: 0;
+}
+.page-dark p {
+  margin: 0;
+}
+.page-dark ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+}
+.page-dark .content {
+  grid-area: content;
+  background-color: #161617;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 24px;
+}
+.page-dark article {
+  height: 1000px;
+}
+.page-dark form {
+  display: flex;
+  flex-direction: column;
+}
+.page-dark .input {
+  width: 330px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-dark label {
+  font-weight: bold;
+}
+.page-dark input[type=text],
+.page-dark input[type=date],
+.page-dark input[type=email],
+.page-dark input[type=number],
+.page-dark input[type=tel],
+.page-dark select,
+.page-dark textarea {
+  cursor: default;
+  width: 200px;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 2px solid lightblue;
+  background-color: #444446;
+}
+.page-dark .form-section {
+  border: 6px solid lightblue;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px 0;
+  background-color: #3b3b3f;
+}
+.page-dark .logo {
+  color: white;
+}
+.page-dark .card {
+  padding: 24px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 32px;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  background-color: #282829;
+  color: white;
+}
+.page-dark .img {
+  width: 500px;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.page-dark .img__small {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.page-dark .img__small:hover {
+  width: 72%;
+  height: 82%;
+  object-fit: cover;
+  border-radius: 8px;
+  position: absolute;
+  right: 350px;
+  top: 28px;
+  transition: opacity 0.5s, top 0.5s;
+}
+.page-dark .text-and-icons {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.page-dark .wrapper__column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.page-dark .wrapper__column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.page-dark .wrapper__inline {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+.page-dark .wrapper__inline-start {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: flex-start;
+}
+.page-dark .footer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  background-color: black;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}
+.page-dark button {
+  padding: 12px 16px;
+  background-color: darkblue;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+}
